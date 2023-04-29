@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto Mono';
+   
+}
+
+body {
+    background: rgb(8, 7, 14);
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22rem;
+    transform: translate(-50%, -50%);
+    background: rgb(27, 23, 41);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    animation: ani-shadow 20s infinite;
+}
+
+@keyframes ani-shadow {
+    0% {
+        box-shadow: 0 0 20px rgb(62, 50, 107), 0 0 10px rgb(71, 57, 124);
+    }
+    50% {
+        box-shadow: 0 0 30px rgb(62, 50, 107), 0 0 20px rgb(82, 65, 145);
+    }
+    100%{
+        box-shadow: 0 0 20px rgb(62, 50, 107), 0 0 10px rgb(71, 57, 124);
+    }
+}
+
+.box h1 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.box-question {
+    padding: 1rem;
+}
+.box-question input {
+    color: #fff;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+.box-question label,
+.box-question input:focus~label {
+    left: 0;
+    pointer-events: none;
+    position: relative;
+    top: -40px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+.box-question input:placeholder-shown~label
+ {
+    left: 3px;
+    top: -25px;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+}
+
+
+.button-click {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#calcular {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+#calcular:hover {
+    transition: 0.5s;
+    background: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 25px white;
+}
+
+.result {
+    margin: 1.2rem 1rem 0;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white;
+    pointer-events: none;
+    font-size: 14px;
+    transition: 1s;
+}
